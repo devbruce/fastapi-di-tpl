@@ -1,3 +1,4 @@
+from settings import get_app_settings
 from utils.paths import APP_DESCRIPTION_PATH
 
 
@@ -6,5 +7,7 @@ def get_app_description() -> str:
     return app_description
 
 
-def get_version() -> str:
-    return "0.1.0"
+def get_app_version() -> str:
+    settings = get_app_settings()
+    version = f"{settings.VERSION}:{settings.ENV.value}"
+    return version

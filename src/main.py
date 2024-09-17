@@ -3,7 +3,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from utils.app_info import get_app_description
-from utils.app_info import get_version
+from utils.app_info import get_app_version
 
 
 def create_app() -> FastAPI:
@@ -12,7 +12,7 @@ def create_app() -> FastAPI:
     app = FastAPI(
         title="FastAPI with Dependency Injector",
         description=get_app_description(),
-        version=get_version(),
+        version=get_app_version(),
         lifespan=lifespan,
     )
 

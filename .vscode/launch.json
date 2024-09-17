@@ -19,6 +19,8 @@
             "console": "internalConsole",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}/src:${PYTHONPATH}",
+                "APP_ENV": "local",
+                "APP_VERSION": "debug",
             }
         }
     ]
