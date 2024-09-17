@@ -1,0 +1,41 @@
+default_stages: [pre-commit]
+repos:
+  - repo: local
+    hooks:
+      - id: mypy
+        name: "[mypy] Type Checker"
+        language: system
+        entry: mypy --config-file=pyproject.toml
+        types: [file, python]
+
+  - repo: local
+    hooks:
+      - id: black
+        name: "[black] Formatter"
+        language: system
+        entry: black --config=pyproject.toml
+        types: [file, python]
+
+  - repo: local
+    hooks:
+      - id: isort
+        name: "[isort] Sort imports"
+        language: system
+        entry: isort --sp=pyproject.toml
+        types: [file, python]
+
+  - repo: local
+    hooks:
+      - id: flake8
+        name: "[flake8] Linter"
+        language: system
+        entry: flake8 --toml-config=pyproject.toml
+        types: [file, python]
+
+  - repo: local
+    hooks:
+      - id: pytest
+        name: "[pytest] Test"
+        language: system
+        entry: pytest -c pyproject.toml
+        pass_filenames: false
