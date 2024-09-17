@@ -8,8 +8,91 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "~3.12"
+fastapi = {extras = ["standard"], version = "~0.114.2"}
+pydantic-settings = "~2.5.2"
+dependency-injector = "~4.42.0"
+loguru = "~0.7.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "~8.3.3"
+pytest-asyncio = "~0.24.0"
+pytest-cov = "~5.0.0"
+pytest-env = "~1.1.4"
+pytest-mock = "~3.14.0"
+pytest-xdist = {extras = ["psutil"], version = "~3.6.1"}
+flake8-pyproject = "~1.2.3"
+black = "~24.8.0"
+isort = "~5.13.2"
+mypy = "~1.11.2"
+pre-commit = "~3.8.0"
+ipykernel = "~6.29.5"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+enable_incomplete_feature = ["NewGenericSyntax"]
+exclude = [
+  ".venv",
+]
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+exclude = '''
+(
+  /(
+    | \.venv
+  )/
+)
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 120
+force_single_line = true
+skip_glob = [
+  ".venv/**",
+]
+
+[tool.flake8]
+ignore = ["C901", "E501"]
+max-line-length = 120
+per-file-ignores = [
+  "__init__.py:F401",
+]
+exclude = [
+  ".venv",
+]
+
+
+[tool.pytest.ini_options]
+markers = [
+    "e2e: End-to-end test",
+    "integration: Combined entity test",
+    "unit: Single entity",
+]
+asyncio_mode = "auto"
+pythonpath = [
+  "src",
+  "tests",
+]
+testpaths = [
+  "tests",
+]
+addopts = [
+  "--numprocesses=auto",
+  "--disable-warnings",
+  "--cov",
+  "--cov-config=.coveragerc",
+  "--cov-report=term",
+  "--cov-report=xml",
+]
+env = [
+    "ENV=test",
+]
