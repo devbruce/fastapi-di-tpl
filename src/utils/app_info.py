@@ -1,5 +1,12 @@
-from settings import get_app_settings
+from functools import cache
+
+from settings import AppSettings
 from utils.paths import APP_DESCRIPTION_PATH
+
+
+@cache
+def get_app_settings() -> AppSettings:
+    return AppSettings()
 
 
 def get_app_description() -> str:
