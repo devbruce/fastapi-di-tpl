@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Server",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "src.main:create_app",
+                "--port=32000",
+                "--factory",
+                "--reload",
+            ],
+            "jinja": true,
+            "console": "internalConsole",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src:${PYTHONPATH}",
+            }
+        }
+    ]
+}
