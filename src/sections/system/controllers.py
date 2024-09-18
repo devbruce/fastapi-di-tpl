@@ -7,7 +7,7 @@ router = APIRouter(tags=["System"])
 
 
 @router.get("/", include_in_schema=False)
-async def docs() -> RedirectResponse:
+async def redirect_docs() -> RedirectResponse:
     return RedirectResponse(url="/docs")
 
 
