@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
-from di_containers import MainContainer
+from containers import MainContainer
 from utils.app_info import get_app_description
 from utils.app_info import get_app_version
 
