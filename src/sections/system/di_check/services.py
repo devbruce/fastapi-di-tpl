@@ -9,6 +9,6 @@ class DependencyInjectorCheckServiceImpl(DependencyInjectorCheckService):
         self.injected_config_value = injected_config_value
 
     @override
-    def check(self) -> DependencyInjectorCheckResponse:  # type: ignore
+    def check(self) -> DependencyInjectorCheckResponse:
         response = DependencyInjectorCheckResponse(injected_config_value=self.injected_config_value)
         return response
