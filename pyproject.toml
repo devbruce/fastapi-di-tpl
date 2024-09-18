@@ -94,5 +94,5 @@ addopts = [
   "--cov-report=xml",
 ]
 env = [
-    "ENV=test",
+    "APP_ENV=test",
 ]

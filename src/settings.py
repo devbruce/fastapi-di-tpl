@@ -7,7 +7,6 @@ from pydantic_settings import SettingsConfigDict
 class EnvEnum(str, Enum):
     LOCAL = "local"
     TEST = "test"
-    CI = "ci"
     DEV = "dev"
     STG = "stg"
     PRD = "prd"
