@@ -6,7 +6,7 @@ export PYTHONPATH = ./src:$PYTHONPATH
 # ======================
 # Variables
 # ======================
-PORT := 32001
+PORT := 32000
 
 # ======================
 # Commmands
