@@ -4,6 +4,6 @@
     "python.autoComplete.extraPaths": ["${workspaceFolder}/src"],
     "python.testing.pytestArgs": ["tests", "--no-cov", "-vv"],
     "python.testing.pytestEnabled": true,
-    "python.testing.unittestEnabled": true,
+    "python.testing.unittestEnabled": false,
     "python.testing.autoTestDiscoverOnSaveEnabled": true,
 }
