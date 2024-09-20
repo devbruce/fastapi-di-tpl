@@ -5,6 +5,7 @@
 <p align="center">
     <img src="https://img.shields.io/badge/Python-3.12-blue?style=flat&logo=python" />
     <img src="https://img.shields.io/badge/FastAPI-0.115-brightgreen?style=flat&logo=fastapi" />
+    <br>
     <img src="https://github.com/devbruce/fastapi-di-tpl/actions/workflows/test.yml/badge.svg?branch=main" />
 </p>
 
@@ -112,7 +113,7 @@ git push --no-verify
 <br><br>
 
 > [!TIP]  
-> For details on the make commands, refer to the [`Makefile`](./Makefile).
+> For details on the make commands, refer to the [`Makefile`](./Makefile)
 
 
 ## 🚀 Run Server on Local
