@@ -24,6 +24,7 @@ flake8-pyproject = "~1.2.3"
 black = "~24.8.0"
 isort = "~5.13.2"
 mypy = "~1.11.2"
+types-pyyaml = "~6.0.12.20240917"
 pre-commit = "~3.8.0"
 ipykernel = "~6.29.5"
 
