@@ -2,8 +2,8 @@ from dependency_injector import containers
 from dependency_injector import providers
 from dependency_injector.providers import Provider
 
-from sections.system.di_check.interfaces import DependencyInjectorCheckService
-from sections.system.di_check.services import DependencyInjectorCheckServiceImpl
+from core.system.di_check.interfaces import DependencyInjectorCheckService
+from core.system.di_check.services import DependencyInjectorCheckServiceImpl
 
 
 class DependencyInjectorCheckContainer(containers.DeclarativeContainer):

@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from pydantic import ConfigDict
 from pydantic.config import JsonDict
 
-from sections.system.di_check.examples import response_examples
+from core.system.di_check.examples import response_examples
 
 
 class DependencyInjectorCheckResponse(BaseModel):

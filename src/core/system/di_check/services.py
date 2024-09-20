@@ -1,7 +1,7 @@
 from typing import override
 
-from sections.system.di_check.interfaces import DependencyInjectorCheckService
-from sections.system.di_check.schemas import DependencyInjectorCheckResponse
+from core.system.di_check.interfaces import DependencyInjectorCheckService
+from core.system.di_check.schemas import DependencyInjectorCheckResponse
 
 
 class DependencyInjectorCheckServiceImpl(DependencyInjectorCheckService):

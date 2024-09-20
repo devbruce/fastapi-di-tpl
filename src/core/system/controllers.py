@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from fastapi.responses import RedirectResponse
 
-from sections.system.schemas import HealthResponse
+from core.system.schemas import HealthResponse
 
 router = APIRouter(tags=["System"])
 

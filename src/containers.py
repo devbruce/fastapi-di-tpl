@@ -5,7 +5,7 @@ from dependency_injector.containers import DeclarativeContainer
 from dependency_injector.providers import Provider
 from loguru import logger
 
-from sections.system.containers import SystemContainer
+from core.system.containers import SystemContainer
 from utils.app_info import get_app_settings
 from utils.paths import ENV_TO_DI_CONFIG_PATH
 
@@ -25,6 +25,6 @@ class MainContainer(DeclarativeContainer):
         logger.info("* [START] Wiring dependency-injector containers")
         main_container = cls()
         for container in main_container.traverse(types=[providers.Container]):
-            container.wire(packages=["sections"])
+            container.wire(packages=["core"])
         logger.info("* [COMPLETED] Wiring dependency-injector containers")
         return main_container

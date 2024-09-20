@@ -8,7 +8,7 @@ from utils.app_info import get_app_version
 
 
 def create_app() -> FastAPI:
-    from sections.system.controllers import router as system_router
+    from core.system.controllers import router as system_router
 
     app = FastAPI(
         title="FastAPI with Dependency Injector",
