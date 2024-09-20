@@ -7,6 +7,8 @@ from httpx import ASGITransport
 from httpx import AsyncClient
 
 from main import create_app
+from settings import AppSettings
+from utils.app_info import get_app_settings
 
 
 @pytest.fixture(scope="session")
@@ -33,3 +35,9 @@ def event_loop():
     loop = asyncio.get_event_loop()
     yield loop
     loop.close()
+
+
+@pytest.fixture(scope="session")
+def app_settings() -> AppSettings:
+    app_settings = get_app_settings()
+    return app_settings
