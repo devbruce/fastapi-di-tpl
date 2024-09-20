@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: "Build & Cache with Poetry"
-        uses: ./.github/workflows/reusable/build.yaml
+        uses: ./.github/workflows/reusable/build.yml
         with:
           python-version: "3.12"
 
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: "Build & Cache with Poetry"
-        uses: ./.github/workflows/reusable/build.yaml
+        uses: ./.github/workflows/reusable/build.yml
         with:
           python-version: "3.12"
 

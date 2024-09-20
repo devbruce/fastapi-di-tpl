@@ -15,14 +15,14 @@ TESTS_DIR = PROJECT_ROOT_DIR / "tests"
 def ENV_TO_DI_CONFIG_PATH(env: EnvEnum) -> Path:
     match env:
         case EnvEnum.LOCAL:
-            return APP_DI_CONFIG_DIR / "local.yaml"
+            return APP_DI_CONFIG_DIR / "local.yml"
         case EnvEnum.TEST:
-            return APP_DI_CONFIG_DIR / "test.yaml"
+            return APP_DI_CONFIG_DIR / "test.yml"
         case EnvEnum.DEV:
-            return APP_DI_CONFIG_DIR / "dev.yaml"
+            return APP_DI_CONFIG_DIR / "dev.yml"
         case EnvEnum.STG:
-            return APP_DI_CONFIG_DIR / "stg.yaml"
+            return APP_DI_CONFIG_DIR / "stg.yml"
         case EnvEnum.PRD:
-            return APP_DI_CONFIG_DIR / "prd.yaml"
+            return APP_DI_CONFIG_DIR / "prd.yml"
         case _:
             raise ValueError("Not supported env value")
