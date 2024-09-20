@@ -4,6 +4,7 @@
 
 <p align="center">
     <img src="https://img.shields.io/badge/Python-3.12-blue?style=flat&logo=python" />
+    <img src="https://img.shields.io/badge/FastAPI-0.115-brightgreen?style=flat&logo=fastapi" />
     <img src="https://github.com/devbruce/fastapi-di-tpl/actions/workflows/test.yaml/badge.svg?branch=main" />
 </p>
 
