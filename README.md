@@ -3,10 +3,12 @@
 </h1>
 
 <p align="center">
+    <img src="https://github.com/devbruce/fastapi-di-tpl/actions/workflows/test.yml/badge.svg?branch=main" />
+    <img src="https://img.shields.io/github/release/devbruce/fastapi-di-tpl.svg" />
+    <br>
     <img src="https://img.shields.io/badge/Python-3.12-blue?style=flat&logo=python" />
     <img src="https://img.shields.io/badge/FastAPI-0.115-brightgreen?style=flat&logo=fastapi" />
-    <br>
-    <img src="https://github.com/devbruce/fastapi-di-tpl/actions/workflows/test.yml/badge.svg?branch=main" />
+    <img src="https://img.shields.io/badge/Dependency Injector-4.42-skyblue?style=flat" />
 </p>
 
 > [!NOTE]  
