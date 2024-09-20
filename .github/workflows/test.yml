@@ -10,11 +10,18 @@ jobs:
     name: "Lint & Format"
     runs-on: ubuntu-24.04
     steps:
+      #----------------------------------------------
+      #       Check out repo
+      #----------------------------------------------
+      - name: Check out repository
+        uses: actions/checkout@v4
+      #----------------------------------------------
+      #       Build & Cache
+      #----------------------------------------------
       - name: "Build & Cache with Poetry"
         uses: ./.github/workflows/reusable/build.yml
         with:
           python-version: "3.12"
-
       #----------------------------------------------
       # Check Lint & Format on poetry environment
       #----------------------------------------------
@@ -29,11 +36,18 @@ jobs:
     name: "Test"
     runs-on: ubuntu-24.04
     steps:
+      #----------------------------------------------
+      #       Check out repo
+      #----------------------------------------------
+      - name: Check out repository
+        uses: actions/checkout@v4
+      #----------------------------------------------
+      #       Build & Cache
+      #----------------------------------------------
       - name: "Build & Cache with Poetry"
         uses: ./.github/workflows/reusable/build.yml
         with:
           python-version: "3.12"
-
       #----------------------------------------------
       # Run tests on poetry environment
       #----------------------------------------------
