@@ -1,4 +1,4 @@
-name: "Lint & Test CI"
+name: "CI: Lint & Test"
 on: [push]
 
 concurrency:
@@ -11,15 +11,10 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       #----------------------------------------------
-      #       Check out repo
-      #----------------------------------------------
-      - name: Check out repository
-        uses: actions/checkout@v4
-      #----------------------------------------------
-      #       Build & Cache
+      #       Build & Cache with Poetry
       #----------------------------------------------
       - name: "Build & Cache with Poetry"
-        uses: ./.github/workflows/reusable/build.yml
+        uses: devbruce/poetry-build-action@1.0.0
         with:
           python-version: "3.12"
       #----------------------------------------------
@@ -37,15 +32,10 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       #----------------------------------------------
-      #       Check out repo
-      #----------------------------------------------
-      - name: Check out repository
-        uses: actions/checkout@v4
-      #----------------------------------------------
-      #       Build & Cache
+      #       Build & Cache with Poetry
       #----------------------------------------------
       - name: "Build & Cache with Poetry"
-        uses: ./.github/workflows/reusable/build.yml
+        uses: devbruce/poetry-build-action@1.0.0
         with:
           python-version: "3.12"
       #----------------------------------------------
