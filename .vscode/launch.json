@@ -16,7 +16,7 @@
                 "--reload",
             ],
             "jinja": true,
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}/src:${PYTHONPATH}",
                 "APP_ENV": "local",
