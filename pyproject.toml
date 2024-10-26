@@ -8,8 +8,8 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "~3.12"
-fastapi = {extras = ["standard"], version = "~0.115.2"}
-pydantic-settings = "~2.5.2"
+fastapi = {extras = ["standard"], version = "~0.115.3"}
+pydantic-settings = "~2.6.0"
 dependency-injector = "~4.42.0"
 loguru = "~0.7.2"
 
@@ -21,11 +21,11 @@ pytest-env = "~1.1.5"
 pytest-mock = "~3.14.0"
 pytest-xdist = {extras = ["psutil"], version = "~3.6.1"}
 flake8-pyproject = "~1.2.3"
-black = "~24.8.0"
+black = "~24.10.0"
 isort = "~5.13.2"
-mypy = "~1.11.2"
+mypy = "~1.13.0"
 types-pyyaml = "~6.0.12.20240917"
-pre-commit = "~3.8.0"
+pre-commit = "~4.0.1"
 ipykernel = "~6.29.5"
 
 
