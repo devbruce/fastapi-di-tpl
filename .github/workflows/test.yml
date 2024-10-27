@@ -2,7 +2,7 @@ name: "CI: Lint & Test"
 on: [push]
 
 concurrency:
-  group: lint-${{ github.ref }}
+  group: test-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
