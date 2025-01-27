@@ -40,31 +40,39 @@ direnv allow
 
 ### ✔️ Create Virtual Environment with [Poetry](https://python-poetry.org/)
 
-Install python with [pyenv](https://github.com/pyenv/pyenv)
+- Install python with [pyenv](https://github.com/pyenv/pyenv)
 
 ```bash
 pyenv install ${PYTHON_VERSION}
 ```
 
-Set poetry config
+- Set poetry config
 
 ```bash
 poetry config virtualenvs.in-project true
 ```
 
-Create virtualenv(`.venv`) with poetry
+- Create virtualenv(`.venv`) with poetry
 
 ```bash
 poetry env use $(pyenv root)/versions/${PYTHON_VERSION}/bin/python
 ```
 
-Install python dependencies with poetry([`poetry.lock`](./poetry.lock))
+- Install python dependencies with poetry([`poetry.lock`](./poetry.lock))
 
 ```bash
 poetry install
 ```
 
-Activate virtualenv(`.venv`) with poetry
+- Activate virtualenv(`.venv`)
+
+> Ref: [managing-environments#activating-the-environment](https://python-poetry.org/docs/managing-environments#activating-the-environment)
+
+```bash
+eval $(poetry env activate)
+```
+
+- Activate virtualenv(`.venv`) with plugin([python-poetry/poetry-plugin-shell](https://github.com/python-poetry/poetry-plugin-shell))
 
 ```bash
 poetry shell
