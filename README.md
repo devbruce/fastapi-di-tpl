@@ -3,12 +3,12 @@
 </h1>
 
 <p align="center">
-    <img src="https://github.com/devbruce/fastapi-di-tpl/actions/workflows/test.yml/badge.svg?branch=main" />
-    <img src="https://img.shields.io/github/release/devbruce/fastapi-di-tpl.svg" />
+    <img src="https://github.com/devbruce/fastapi-di-tpl/actions/workflows/test.yml/badge.svg?branch=main" alt="github-action" />
+    <img src="https://img.shields.io/github/release/devbruce/fastapi-di-tpl.svg" alt="release" />
     <br>
-    <img src="https://img.shields.io/badge/Python-3.12-blue?style=flat&logo=python" />
-    <img src="https://img.shields.io/badge/FastAPI-0.115-brightgreen?style=flat&logo=fastapi" />
-    <img src="https://img.shields.io/badge/Dependency Injector-4.42-skyblue?style=flat" />
+    <img src="https://img.shields.io/badge/Python-3.12-blue?style=flat&logo=python" alt="python" />
+    <img src="https://img.shields.io/badge/FastAPI-0.115-brightgreen?style=flat&logo=fastapi" alt="fastapi" />
+    <img src="https://img.shields.io/badge/Dependency Injector-4.45-skyblue?style=flat" alt="dependency-injector" />
 </p>
 
 > [!NOTE]  
@@ -124,7 +124,6 @@ git push --no-verify
 
 > [!TIP]  
 > For details on the make commands, refer to the [`Makefile`](./Makefile)
-
 
 ## 🚀 Run Server on Local
 
