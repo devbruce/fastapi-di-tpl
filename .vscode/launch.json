@@ -11,7 +11,7 @@
             "module": "uvicorn",
             "args": [
                 "src.main:create_app",
-                "--port=32001",
+                "--port=55000",
                 "--factory",
                 "--reload",
             ],
