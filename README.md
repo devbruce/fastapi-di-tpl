@@ -6,7 +6,7 @@
     <img src="https://github.com/devbruce/fastapi-di-tpl/actions/workflows/test.yml/badge.svg?branch=main" alt="github-action" />
     <img src="https://img.shields.io/github/release/devbruce/fastapi-di-tpl.svg" alt="release" />
     <br>
-    <img src="https://img.shields.io/badge/Python-3.12-blue?style=flat&logo=python" alt="python" />
+    <img src="https://img.shields.io/badge/Python-3.13-blue?style=flat&logo=python" alt="python" />
     <img src="https://img.shields.io/badge/FastAPI-0.115-brightgreen?style=flat&logo=fastapi" alt="fastapi" />
     <img src="https://img.shields.io/badge/Dependency Injector-4.45-skyblue?style=flat" alt="dependency-injector" />
 </p>
