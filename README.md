@@ -26,10 +26,10 @@
 
 ### ✔️ Set Environment Variables
 
-Copy  [`.envrc.tpl`](./.envrc.tpl) to `.envrc` for setting environment variables with [direnv](https://direnv.net/)
+Copy  [`.envrc.example`](./.envrc.example) to `.envrc` for setting environment variables with [direnv](https://direnv.net/)
 
 ```bash
-cp .envrc.tpl .envrc
+cp .envrc.example .envrc
 ```
 
 ```bash
