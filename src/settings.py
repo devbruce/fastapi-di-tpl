@@ -9,7 +9,7 @@ class EnvEnum(str, Enum):
     TEST = "test"
     DEV = "dev"
     STG = "stg"
-    PRD = "prd"
+    PROD = "prod"
 
 
 class AppSettings(BaseSettings):

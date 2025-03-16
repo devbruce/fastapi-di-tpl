@@ -15,7 +15,7 @@ from utils.paths import ENV_TO_DI_CONFIG_PATH
         (EnvEnum.TEST, APP_DI_CONFIG_DIR / "test.yml"),
         (EnvEnum.DEV, APP_DI_CONFIG_DIR / "dev.yml"),
         (EnvEnum.STG, APP_DI_CONFIG_DIR / "stg.yml"),
-        (EnvEnum.PRD, APP_DI_CONFIG_DIR / "prd.yml"),
+        (EnvEnum.PROD, APP_DI_CONFIG_DIR / "prod.yml"),
     ],
 )
 def test_env_to_di_config_path(env: EnvEnum, expected: Path):
