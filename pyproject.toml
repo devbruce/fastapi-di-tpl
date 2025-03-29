@@ -37,7 +37,6 @@ build-backend = "poetry.core.masonry.api"
 [tool.mypy]
 python_version = "3.13"
 ignore_missing_imports = true
-enable_incomplete_feature = ["NewGenericSyntax"]
 enable_error_code = ["explicit-override"]
 exclude = [
   ".venv",
