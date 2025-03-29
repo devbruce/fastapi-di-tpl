@@ -5,7 +5,7 @@ from settings import EnvEnum
 
 APP_ROOT_DIR = Path(__file__).resolve().parent.parent
 APP_DESCRIPTION_PATH = APP_ROOT_DIR / "description.md"
-APP_DI_CONFIG_DIR = APP_ROOT_DIR / "di_configs"
+APP_DI_CONFIG_DIR = APP_ROOT_DIR / "configs"
 
 PROJECT_ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 TESTS_DIR = PROJECT_ROOT_DIR / "tests"

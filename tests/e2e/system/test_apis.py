@@ -23,11 +23,11 @@ async def test_health(async_test_client: AsyncClient):
 
 
 @pytest.mark.e2e
-async def test_di_check(async_test_client: AsyncClient, app_settings: AppSettings):
-    di_config_text = ENV_TO_DI_CONFIG_PATH(app_settings.ENV).read_text(encoding="utf-8")
-    di_config = yaml.safe_load(di_config_text)
-    expected_injected_config_value = di_config["system"]["di_check"]["value"]
+async def test_di_config_checker(async_test_client: AsyncClient, app_settings: AppSettings):
+    config_text = ENV_TO_DI_CONFIG_PATH(app_settings.ENV).read_text(encoding="utf-8")
+    config = yaml.safe_load(config_text)
+    expected_injected_config_env = config["system"]["di_config_checker"]["env"]
 
-    response = await async_test_client.get("/di-check")
+    response = await async_test_client.get("/di-config-check")
     assert response.status_code == status.HTTP_200_OK
-    assert response.json()["injected_config_value"] == expected_injected_config_value
+    assert response.json()["injected_config_env"] == expected_injected_config_env
