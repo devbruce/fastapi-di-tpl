@@ -1,0 +1,4 @@
+system:
+  di_config_checker:
+    env: stg
+  
