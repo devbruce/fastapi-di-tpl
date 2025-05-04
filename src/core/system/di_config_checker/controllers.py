@@ -1,3 +1,5 @@
+from typing import Annotated
+
 from dependency_injector.wiring import Provide
 from dependency_injector.wiring import inject
 from fastapi import Depends
@@ -11,9 +13,10 @@ from core.system.di_config_checker.schemas import DependencyInjectorConfigChecke
 @router.get("/di-config-check", response_model=DependencyInjectorConfigCheckerResponse)
 @inject
 async def di_check(
-    service: DependencyInjectorConfigChecker = Depends(
-        Provide[DependencyInjectorConfigCheckerContainer.di_config_checker],
-    ),
+    service: Annotated[
+        DependencyInjectorConfigChecker,
+        Depends(Provide[DependencyInjectorConfigCheckerContainer.di_config_checker]),
+    ],
 ) -> DependencyInjectorConfigCheckerResponse:
     response = service.check()
     return response
