@@ -9,8 +9,6 @@
     <img src="https://img.shields.io/badge/Python-3.13-blue?style=flat&logo=python" alt="python" />
     <img src="https://img.shields.io/badge/FastAPI-0.116-brightgreen?style=flat&logo=fastapi" alt="fastapi" />
     <img src="https://img.shields.io/badge/Dependency Injector-4.48-skyblue?style=flat" alt="dependency-injector" />
-    <br>
-    <img src="https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json" alt="poetry" />
 </p>
 
 > [!NOTE]  
@@ -39,9 +37,7 @@ direnv allow
 
 <br>
 
-### ✔️ Create Virtual Environment with [Poetry](https://python-poetry.org/)
-
-- Install python with [pyenv](https://github.com/pyenv/pyenv)
+### ✔️ Create Virtual Environment with [uv](https://github.com/astral-sh/uv)
 
 ```bash
 uv sync
