@@ -7,8 +7,8 @@
     <img src="https://img.shields.io/github/release/devbruce/fastapi-di-tpl.svg" alt="release" />
     <br>
     <img src="https://img.shields.io/badge/Python-3.13-blue?style=flat&logo=python" alt="python" />
-    <img src="https://img.shields.io/badge/FastAPI-0.115-brightgreen?style=flat&logo=fastapi" alt="fastapi" />
-    <img src="https://img.shields.io/badge/Dependency Injector-4.46-skyblue?style=flat" alt="dependency-injector" />
+    <img src="https://img.shields.io/badge/FastAPI-0.116-brightgreen?style=flat&logo=fastapi" alt="fastapi" />
+    <img src="https://img.shields.io/badge/Dependency Injector-4.48-skyblue?style=flat" alt="dependency-injector" />
     <br>
     <img src="https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json" alt="poetry" />
 </p>
@@ -20,8 +20,7 @@
 
 ### 🛠️ Prerequisites
 
-- [pyenv](https://github.com/pyenv/pyenv)
-- [Poetry](https://python-poetry.org/)
+- [uv](https://github.com/astral-sh/uv)
 - [direnv](https://direnv.net/)
 
 <br>
@@ -45,39 +44,13 @@ direnv allow
 - Install python with [pyenv](https://github.com/pyenv/pyenv)
 
 ```bash
-pyenv install ${PYTHON_VERSION}
-```
-
-- Set poetry config
-
-```bash
-poetry config virtualenvs.in-project true
-```
-
-- Create virtualenv(`.venv`) with poetry
-
-```bash
-poetry env use $(pyenv root)/versions/${PYTHON_VERSION}/bin/python
-```
-
-- Install python dependencies with poetry([`poetry.lock`](./poetry.lock))
-
-```bash
-poetry install
+uv sync
 ```
 
 - Activate virtualenv(`.venv`)
 
-> Ref: [managing-environments#activating-the-environment](https://python-poetry.org/docs/managing-environments#activating-the-environment)
-
 ```bash
-eval $(poetry env activate)
-```
-
-- Activate virtualenv(`.venv`) with plugin([python-poetry/poetry-plugin-shell](https://github.com/python-poetry/poetry-plugin-shell))
-
-```bash
-poetry shell
+source .venv/bin/activate
 ```
 
 <br>

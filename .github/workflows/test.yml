@@ -18,19 +18,19 @@ jobs:
       #----------------------------------------------
       # Build & Cache environment
       #----------------------------------------------
-      - name: "Build & Cache with Poetry"
-        uses: devbruce/poetry-build-action@1.0.0
+      - name: "Install uv"
+        uses: astral-sh/setup-uv@v6
         with:
-          python-version: "3.13"
+          enable-cache: true
+
+      - name: "Build project with uv"
+        run: uv sync --locked --all-extras --dev
       #----------------------------------------------
       # Check Lint & Format
       #----------------------------------------------
       - name: "Lint & Format Check"
         run: |
-          poetry run mypy --config-file=pyproject.toml .
-          poetry run black --config=pyproject.toml --check .
-          poetry run isort --sp=pyproject.toml --check .
-          poetry run flake8 --toml-config=pyproject.toml .
+          make check
 
   test:
     name: "Test"
@@ -44,13 +44,16 @@ jobs:
       #----------------------------------------------
       # Build & Cache environment
       #----------------------------------------------
-      - name: "Build & Cache with Poetry"
-        uses: devbruce/poetry-build-action@1.0.0
+      - name: "Install uv"
+        uses: astral-sh/setup-uv@v6
         with:
-          python-version: "3.13"
+          enable-cache: true
+
+      - name: "Build project with uv"
+        run: uv sync --locked --all-extras --dev
       #----------------------------------------------
       # Run tests
       #----------------------------------------------
       - name: "Run tests"
         run: |
-          poetry run pytest -c pyproject.toml
+          make test
