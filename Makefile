@@ -23,4 +23,5 @@ format:
 
 check:
 	uv run ruff check --config=pyproject.toml .
+	uv run ruff format --check --config=pyproject.toml .
 	uv run mypy --config-file=pyproject.toml .

@@ -11,9 +11,18 @@ repos:
   - repo: local
     hooks:
       - id: ruff
-        name: "[Lint & Format Checker] ruff"
+        name: "[Lint Checker] ruff"
         language: system
         entry: ruff check --config=pyproject.toml
+        types: [file, python]
+        stages: [pre-commit]
+
+  - repo: local
+    hooks:
+      - id: ruff
+        name: "[Format Checker] ruff"
+        language: system
+        entry: ruff format --check --config=pyproject.toml
         types: [file, python]
         stages: [pre-commit]
 
