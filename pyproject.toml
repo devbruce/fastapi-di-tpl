@@ -34,7 +34,7 @@ python_version = "3.13"
 ignore_missing_imports = true
 enable_error_code = ["explicit-override"]
 exclude = [
-  ".venv",
+    ".venv",
 ]
 
 # ---------------------------------
@@ -73,19 +73,19 @@ markers = [
 ]
 asyncio_mode = "auto"
 pythonpath = [
-  "src",
-  "tests",
+    "src",
+    "tests",
 ]
 testpaths = [
-  "tests",
+    "tests",
 ]
 addopts = [
-  "--numprocesses=auto",
-  "--disable-warnings",
-  "--cov",
-  "--cov-config=.coveragerc",
-  "--cov-report=term",
-  "--cov-report=xml",
+    "--numprocesses=auto",
+    "--disable-warnings",
+    "--cov",
+    "--cov-config=.coveragerc",
+    "--cov-report=term",
+    "--cov-report=xml",
 ]
 env = [
     "APP_ENV=test",
