@@ -18,6 +18,7 @@ test:
 	uv run pytest -c pyproject.toml
 
 format:
+	uv run ruff check --fix --config=pyproject.toml .
 	uv run ruff format --config=pyproject.toml .
 
 check:
