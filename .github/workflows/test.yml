@@ -14,12 +14,12 @@ jobs:
       # Check out repo
       #----------------------------------------------
       - name: "Check out repository"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.1
       #----------------------------------------------
       # Build & Cache environment
       #----------------------------------------------
       - name: "Install uv"
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@v7.2.0
         with:
           enable-cache: true
 
@@ -40,12 +40,12 @@ jobs:
       # Check out repo
       #----------------------------------------------
       - name: "Check out repository"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.1
       #----------------------------------------------
       # Build & Cache environment
       #----------------------------------------------
       - name: "Install uv"
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@v7.2.0
         with:
           enable-cache: true
 

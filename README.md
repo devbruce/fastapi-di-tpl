@@ -6,8 +6,8 @@
     <img src="https://github.com/devbruce/fastapi-di-tpl/actions/workflows/test.yml/badge.svg?branch=main" alt="github-action" />
     <img src="https://img.shields.io/github/release/devbruce/fastapi-di-tpl.svg" alt="release" />
     <br>
-    <img src="https://img.shields.io/badge/Python-3.13-blue?style=flat&logo=python" alt="python" />
-    <img src="https://img.shields.io/badge/FastAPI-0.116-brightgreen?style=flat&logo=fastapi" alt="fastapi" />
+    <img src="https://img.shields.io/badge/Python-3.14-blue?style=flat&logo=python" alt="python" />
+    <img src="https://img.shields.io/badge/FastAPI-0.128-brightgreen?style=flat&logo=fastapi" alt="fastapi" />
     <img src="https://img.shields.io/badge/Dependency Injector-4.48-skyblue?style=flat" alt="dependency-injector" />
 </p>
 
@@ -51,16 +51,16 @@ source .venv/bin/activate
 
 <br>
 
-### ✔️ Install pre-commit Hooks(`.git/hooks`)
+### ✔️ Install prek Hooks(`.git/hooks`)
 
-> pre-commit: [Link](https://pre-commit.com/)
+> prek: [Link](https://prek.j178.dev/)
 
 ```bash
-pre-commit install -t pre-commit
+prek install -t pre-commit
 ```
 
 ```bash
-pre-commit install -t pre-push
+prek install -t pre-push
 ```
 
 <br>
@@ -69,7 +69,7 @@ pre-commit install -t pre-push
   <summary>🖱️ Run Manually</summary>
 
 ```bash
-pre-commit run
+prek run
 ```
 
 </details>

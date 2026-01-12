@@ -1,10 +1,10 @@
 repos:
   - repo: local
     hooks:
-      - id: mypy
-        name: "[Type Checker] mypy"
+      - id: ty
+        name: "[Type Checker] ty"
         language: system
-        entry: mypy --config-file=pyproject.toml
+        entry: ty check
         types: [file, python]
         stages: [pre-commit]
 
